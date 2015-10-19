@@ -142,9 +142,9 @@ function PopulateGameHome () {
 								}
 							} else {
 								if(id <= 5) {
-									firstRow.append('<div class="temaDiv"><button class="tema-off" id="' + id + '"><img src="images/star.png" class="star"></img><div class="tema-off-cont"><label class="tema-off-label">' + name.toString() + '</label></div></button></div>');
+									firstRow.append('<div class="temaDiv"><button class="tema-off" id="' + id + '" onclick="SelectTema(' + id + ',' + nameString + ',' + round + ',' + bgString + ')"><img src="images/star.png" class="star"></img><div class="tema-off-cont"><label class="tema-off-label">' + name.toString() + '</label></div></button></div>');
 								} else if(id > 5 && id <= 10) {
-									secondRow.append('<div class="temaDiv"><button class="tema-off" id="' + id + '"><img src="images/star.png" class="star"></img><div class="tema-off-cont"><label class="tema-off-label">' + name.toString() + '</label></div></button></div>');
+									secondRow.append('<div class="temaDiv"><button class="tema-off" id="' + id + '" onclick="SelectTema(' + id + ',' + nameString + ',' + round + ',' + bgString + ')"><img src="images/star.png" class="star"></img><div class="tema-off-cont"><label class="tema-off-label">' + name.toString() + '</label></div></button></div>');
 								}
 							}
 						}
