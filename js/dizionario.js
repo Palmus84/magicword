@@ -1,12 +1,12 @@
 var dizionario = {
-    FAMIGLIA:"amico,madre,padre,marito,moglie,papà,babbo,mamma,genitori,figlio,figli,fratello,sorella,nonno,zio,cugino,nonno,nipote,fidanzato,cognato",
-    VIAGGIETRASPORTI:"aereo,aeroporto,macchina,viaggio,treno,nave,turista,museo,vacanza,taxi,arrivare,partire,cartolina,indicazione,guida,soggiorno,albergo,stazione,valigia,strada,biglietto,hotel,moto,montagna,mare,città,auto,automobile,passaporto,aereo,autobus,campeggio,camper,check-in,barca,traghetto,bici,bicicletta",
+    FAMIGLIA:"amico,madre,padre,marito,moglie,pap\u00E0,babbo,mamma,genitori,figlio,figli,fratello,sorella,zio,cugino,nonno,nipote,fidanzato,cognato",
+    VIAGGIETRASPORTI:"aereo,aeroporto,macchina,viaggio,treno,nave,turista,museo,vacanza,taxi,arrivare,partire,cartolina,indicazione,guida,soggiorno,albergo,stazione,valigia,strada,biglietto,hotel,moto,montagna,mare,citt\u00E0,auto,automobile,passaporto,aereo,autobus,campeggio,camper,check-in,barca,traghetto,bici,bicicletta",
     PROFESSIONI:"attore,autore,avvocato,cameriere,commesso,cuoco,dentista,farmacista,fioraio,giornalaio,giornalista,macellaio,maestro,medico,dottore,parrucchiere,pasticcere,pittore,poliziotto,pompiere,postino,professore,sarto,architetto,elettricista,impiegato,infermiere,ingegnere,insegnante,operaio,barista,benzinaio,idraulico,imbianchino,autista,orologiaio,tabaccaio",
     HOBBYESPORT:"calcio,pallone,rete,goal,basket,pallacanestro,pallavolo,nuoto,piscina,pattinaggio,pattini,sci,tennis,tifoso,squadra,hobby,musica,strumento,pianoforte,violino,chitarra,pittura,pennello,giardinaggio,canestro,racchetta,enigmistica,flauto,ricamo,uncinetto,maglia",
     CORPOUMANO:"viso,faccia,occhio,orecchio,naso,bocca,dente,lingua,capelli,collo,spalle,schiena,pancia,braccio,mano,gamba,ginocchio,caviglia,piede,guancia,gomito,polso",
     COLORIEFORME:"Nero,Bianco,Giallo,Rosso,Arancione,Rosa,Verde,Blu,Azzurro,Celeste,Marrone,Viola,Grigio,Cerchio,Triangolo,Quadrato,Rettangolo,Cuore,Stella,Cubo,Rombo,Trapezio,Pentagono,Esagono,Cilindro",
     ALIMENTIECUCINA:"pane,pasta,riso,carne,salsiccia,prosciutto,salame,pesce,formaggio,uovo,mela,pera,banana,fragola,ciliegia,pesca,albicocca,arancia,limone,insalata,pomodoro,patata,zucchina,carota,melanzana,acqua,vino,birra,caffé,cappuccino,caffellatte,espresso,tè,latte,succo,bistecca,aceto,acqua,burro",
-    FORMAZIONEESTUDIO:"scuola,alunno,aula,banco,cattedra,compiti,insegnante,interrogazione,laboratorio,lavagna,materia,orario,palestra,pagella,preside,quadrimestre,semestre,voto,università,biblioteca,dipartimento,esame,facoltà,laurea,libretto,lezione,orario,portineria,preside,professore,rettore,ricevimento,segreteria,studente,voto,Liceo,Istituto,Esame,Diploma,Laurea,Dottore,Master,Tirocinio",
+    FORMAZIONEESTUDIO:"scuola,alunno,aula,banco,cattedra,compiti,insegnante,interrogazione,laboratorio,lavagna,materia,orario,palestra,pagella,preside,quadrimestre,semestre,voto,universit\u00E0,biblioteca,dipartimento,esame,facolt\u00E0,laurea,libretto,lezione,orario,portineria,preside,professore,rettore,ricevimento,segreteria,studente,voto,Liceo,Istituto,Esame,Diploma,Laurea,Dottore,Master,Tirocinio",
     PLUS:""
 };
 

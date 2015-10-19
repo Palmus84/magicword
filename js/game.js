@@ -451,7 +451,8 @@ function SendWord () {
 		} else {
 			alert("Nessuna parola da inviare");
 		}
-	}
+        
+    }
 }
 
 function SetPunti(punti) {
@@ -460,7 +461,7 @@ function SetPunti(punti) {
 	if(pt == 200) {
 		totalWordboxCounter++;
 		wordsPoints.push(200);
-		if(currentWordboxCounter == 3) {
+		if(currentWordboxCounter == risultato.total-1) {
 			currentWordboxCounter = 0;
 			if(currentRound != maxRound) {
 				RoundFinished();
@@ -515,7 +516,7 @@ function RoundFinished () {
 	var str = '';
 	str += '<span class="intestazione">Bravo</span>, hai trovato tutte le parole di questa griglia';
 	str += '<br><br>';
-	str += '<a onclick="UpdateGameView(temaButtonID, temaButtonNome, currentRound + 1, temaBackground)" class="intestazione">Prosegui con la prossima griglia >></a>';
+	str += '<a onclick="UpdateGameView(temaButtonID, temaButtonNome, currentRound + 1, temaBackground)" class="intestazione" id="prossimagriglia">Prosegui con la prossima griglia >></a>';
 	document.getElementById('founded-words').innerHTML += '<hr>';
 	document.getElementById('founded-words').innerHTML += 'Totale Round - ' + CalcMiddlePoints() + ' punti<br>';
 	document.getElementById('hint').innerHTML = str;

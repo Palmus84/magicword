@@ -135,6 +135,9 @@ button {
 	color: rgba(9, 184, 177, 1.0);
 	font-weight: bold;
 }
+#prossimagriglia{
+    cursor: pointer;
+}
 
 /*
 ==================================================
@@ -302,11 +305,13 @@ button {
 	text-align: center;
 
 	left: 5%;
-	top: 60px;
+	top: 70px;
 	background: rgba(0,0,0,0.5);
 
 	border-radius: 20px;
 	border: 1px solid rgba(255,255,255,1.0);
+        
+        margin-bottom: 90px;
 }
 
 .timer-field>label {
@@ -469,6 +474,10 @@ button {
 	font-size: 15px;
 	font-weight: bold;
 }
+#founded-words{
+    overflow-y: scroll;
+}
+
 /*
 ==================================================
 */
