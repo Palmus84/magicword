@@ -16,6 +16,7 @@ var currentWordboxCounter = 0;
 var pt = 0;
 
 var wordboxWords = [];
+var thisRoundWords = [];
 
 var wordsPoints = [];
 var middlePoints = [];
@@ -444,8 +445,9 @@ function SendWord () {
             selectedButtons=[0];
 		if(document.getElementById('wordField').innerHTML.length > 0) {
 			var tempArr = new Array();
-                        tempArr = wordboxWords;
+                        tempArr = thisRoundWords;
                         if(tempArr.indexOf(currentWord) < 0){//controllo parola gia inserita
+                            thisRoundWords.push(currentWord);
                             CalculatePoints(currentWord);
                         
                             setTimeout( function () {
@@ -528,6 +530,7 @@ function RoundFinished () {
 	document.getElementById('founded-words').innerHTML += 'Totale Round - ' + CalcMiddlePoints() + ' punti<br>';
 	document.getElementById('hint').innerHTML = str;
 	wordsPoints = [];
+        thisRoundWords=[];
 }
 
 function MatchFinished () {
