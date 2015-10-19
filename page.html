@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Magic Word</title>
+		<link rel="stylesheet" type="text/css" href="css/shared.css">
+		<link rel="stylesheet" type="text/css" href="css/home.css">
+		<link rel="stylesheet" type="text/css" href="css/game.css">
+		<link rel="stylesheet" type="text/css" href="css/popup.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="popup popup-hidden" id="popup">
+			<div class="popup-cont" id="popupCont">	
+			</div>
+		</div>
+
+		<div class="main" id="bgCont" style="">
+			<div class="main-cover"></div>
+			<div class="header">
+				<img class="header-title" src="images/title.png">
+				<img class="header-cog" src="images/cog.png">
+			</div>
+			<div id="game-content">
+			</div>
+			<div class="footer-bar">
+			</div>
+		</div>
+
+		<div id="controls">
+	        <div id="controls-wrap">
+	            <textarea id="wordlist" rows="30" cols="30">
+nonno
+nonna
+nonni
+nonne
+nipote
+nipoti
+zio
+zia
+zii
+zie
+madre
+padre
+mamma
+papa
+fratello
+fratelli
+sorella
+sorelle
+prozio
+prozia
+prozii
+prozie
+cugino
+cugina
+cugini
+cugine</textarea>
+	        </div>
+	    </div>	
+            <input type="file" id="input" value="FAMIGLIA.txt">
+                <script type="application/javascript" src="js/lookback.js"></script>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/dizionario.js"></script>
+		<script type="text/javascript" src="js/game.js"></script>
+		<script type="text/javascript" src="js/timer.js"></script>
+		<script type="text/javascript" src="js/winManager.js"></script>	
+	</body>
+</html>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magicWord>
+	<generalGame>
+		<matchNumber>9</matchNumber>
+		<matchNames>
+			<match id="1">
+				<name>viaggi e trasporti</name>
+				<numberOfSubmatch>4</numberOfSubmatch>
+				<themeBg>viaggi</themeBg>
+				<currentRound>1</currentRound>
+				<entries>zio,zia,zii,zie,cane,cani,canini</entries>
+			</match>
+			<match id="2">
+				<name>famiglia</name>
+				<numberOfSubmatch>4</numberOfSubmatch>
+				<themeBg>famiglia</themeBg>
+				<currentRound>1</currentRound>
+				<entries>amico,amica,amici,amiche,madre,padre,marito,moglie,papa,babbo,mamma,genitori,figlio,figlia,figli,figlie,fratello,fratelli,sorelle,sorella,zii,zie,zio,zia,cugino,cugini,cugine,cugina,nonno,nonni,nonne,nonna,nipote,nipoti,prozio,prozia,sorella,fratello</entries>
+			</match>
+			<match id="3">
+				<name>professioni</name>
+				<numberOfSubmatch>4</numberOfSubmatch>
+				<themeBg>professioni</themeBg>
+				<currentRound>1</currentRound>
+				<entries>ciao</entries>
+			</match>
+			<match id="4">
+				<name>hobby e sport</name>
+				<numberOfSubmatch>4</numberOfSubmatch>
+				<themeBg>sport</themeBg>
+				<currentRound>1</currentRound>
+				<entries>ciao</entries>
+			</match>
+			<match id="5">
+				<name>corpo umano</name>
+				<numberOfSubmatch>4</numberOfSubmatch>
+				<themeBg>corpoumano</themeBg>
+				<currentRound>1</currentRound>
+				<entries>ciao</entries>
+			</match>
+			<match id="6">
+				<name>colori e forme</name>
+				<numberOfSubmatch>4</numberOfSubmatch>
+				<themeBg>colori</themeBg>
+				<currentRound>1</currentRound>
+				<entries>ciao</entries>
+			</match>
+			<match id="7">
+				<name>alimenti e cucina</name>
+				<numberOfSubmatch>4</numberOfSubmatch>
+				<themeBg>alimenti</themeBg>
+				<currentRound>1</currentRound>
+				<entries>ciao</entries>
+			</match>
+			<match id="8">
+				<name>formazione e studio</name>
+				<numberOfSubmatch>4</numberOfSubmatch>
+				<themeBg>formazione</themeBg>
+				<currentRound>1</currentRound>
+				<entries>ciao</entries>
+			</match>
+			<match id="9">
+				<name>plus</name>
+				<numberOfSubmatch>4</numberOfSubmatch>
+				<themeBg>bolognaplus</themeBg>
+				<currentRound>1</currentRound>
+				<entries>ciao</entries>
+			</match>
+		</matchNames>
+	</generalGame>
+</magicWord>
