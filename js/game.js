@@ -23,7 +23,7 @@ var middlePoints = [];
 
 var risultato;
 var splice = 0;
-var selectedButtons = [];
+var selectedButtons = [0];
 
 $(document).ready(function() {
 	Storage.prototype.setArray = function(key, obj) {
@@ -413,14 +413,19 @@ function UpdateGameView (idTema, nomeTema, numeroRound, bgTema) {
     }, 500);
 }
 
-function SelectGridButton (buttonId) {
+function SelectGridButton (id) {
 	if(playTimer == true) {
-		if(!$("#" + buttonId).hasClass('grid-button-selected')) {
-			$("#" + buttonId).addClass('grid-button-selected');
-                        currentWord += document.getElementById(buttonId).innerHTML.toString();
+		if(!$("#" + id).hasClass('grid-button-selected')) {
+                    var p=selectedButtons[selectedButtons.length-1];
+                    if(p==0||isAjdacent(id,p)){
+                        $("#" + id).addClass('grid-button-selected');
+                        currentWord += document.getElementById(id).innerHTML.toString();
                         document.getElementById('wordField').innerHTML = currentWord;
+                        selectedButtons.push(id);
+                        console.log(selectedButtons);
+                    }
 		} /*else {
-			$("#" + buttonId).removeClass('grid-button-selected');
+			$("#" + id).removeClass('grid-button-selected');
 		}*/
 		
 	}
@@ -436,6 +441,7 @@ function ResetGridButtons () {
 
 function SendWord () {
 	if(playTimer == true) {
+            selectedButtons=[0];
 		if(document.getElementById('wordField').innerHTML.length > 0) {
 			var tempArr = new Array();
                         tempArr = wordboxWords;
@@ -510,6 +516,7 @@ function DeleteLastChar () {
         ResetGridButtons();
         currentWord = "";
         document.getElementById('wordField').innerHTML = "";
+        selectedButtons=[0];
 }
 
 function RoundFinished () {
@@ -633,4 +640,27 @@ function nuovaGriglia(){
         }
     }
     splice=risultato.total;
+}
+function isAjdacent(id , p) {
+    var x1 = toX(id);
+    var x2 = toX(p);
+    var y1 = toY(id);
+    var y2 = toY(p);
+    if(x1==x2&&y1==y2-1||x1==x2&&y1==y2+1){return true;}
+    if(y1==y2&&x1==x2-1||y1==y2&&x1==x2+1){return true;}
+    if(x1==x2+1&&y1==y2+1||x1==x2+1&&y1==y2-1||x1==x2-1&&y1==y2+1||x1==x2-1&&y1==y2-1){return true;}
+}
+function toY(val) {
+    var x=1;
+    if(val>4){x=2;}
+    if(val>8){x=3;}
+    if(val>12){x=4;}
+    return x;
+}
+function toX(val){
+    if(val==1||val==5||val==9||val==13){return 1;}
+    if(val==2||val==6||val==10||val==14){return 2;}
+    if(val==3||val==7||val==11||val==15){return 3;}
+    if(val==4||val==8||val==12||val==16){return 4;}
+
 }
