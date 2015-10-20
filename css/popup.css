@@ -36,6 +36,7 @@
 	left: 20px;
 	top: 60px;
 	border-radius: 10px;
+        overflow-y: scroll;
 }
 
 .popup-cont>ul {
@@ -43,7 +44,6 @@
 	list-style: none;
 	font-weight: bold;
 	max-height: 100%;
-        overflow-y: scroll;
         margin: 0;
 }
 
@@ -78,4 +78,24 @@
         padding:5px;
         text-align: center;
         margin:15px 6px 0;
+}
+#wiki{
+    position:relative;
+    top:100%;
+    width:100%;
+    margin:-50px auto 0;
+    text-align: center;
+}
+#parolaWiki{
+    width:200px;
+    margin:5px;
+    border: 2px solid lightskyblue;
+    border-radius: 8px;
+    padding:5px;
+}
+#cercaWiki{
+    margin:5px;
+    border: 2px solid lightskyblue;
+    border-radius: 8px;
+    padding:5px;
 }

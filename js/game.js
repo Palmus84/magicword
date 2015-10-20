@@ -309,7 +309,9 @@ function PopulateGameView (idTema, nomeTema, numeroRound, bgTema) {
 }
 
 function UpdateGameView (idTema, nomeTema, numeroRound, bgTema) {
-	nuovaGriglia();
+        wordsPoints = [];
+        thisRoundWords=[];
+        nuovaGriglia();
         
         currentRound = numeroRound;
 	gameContainer.html("");
@@ -467,7 +469,6 @@ function SetPunti(punti) {
 	document.getElementById('founded-words').innerHTML += currentWord + ' - ' + punti + ' punti<br>';
 
 	if(pt == 200) {
-		totalWordboxCounter++;
 		wordsPoints.push(200);
 		if(currentWordboxCounter == risultato.total-1) {
 			currentWordboxCounter = 0;
@@ -479,11 +480,20 @@ function SetPunti(punti) {
 		} else {
 			currentWordboxCounter++;
 		}
-		UpdateWordboxStorage(currentWord);
+                var tempArr = new Array();
+                tempArr = wordboxWords;
+                if(tempArr.indexOf(currentWord) < 0){
+                    totalWordboxCounter++;
+                    UpdateWordboxStorage(currentWord);
+                }
 	} else if(pt == 100) {
 		wordsPoints.push(100);
-		totalWordboxCounter++;
-		UpdateWordboxStorage(currentWord);
+		var tempArr = new Array();
+                tempArr = wordboxWords;
+                if(tempArr.indexOf(currentWord) < 0){
+                    totalWordboxCounter++;
+                    UpdateWordboxStorage(currentWord);
+                }
 	}
 
 	
@@ -529,8 +539,6 @@ function RoundFinished () {
 	document.getElementById('founded-words').innerHTML += '<hr>';
 	document.getElementById('founded-words').innerHTML += 'Totale Round - ' + CalcMiddlePoints() + ' punti<br>';
 	document.getElementById('hint').innerHTML = str;
-	wordsPoints = [];
-        thisRoundWords=[];
 }
 
 function MatchFinished () {
@@ -610,6 +618,8 @@ function PopulatePopup (type) {
 			str += '<li>' + word_list[i].toUpperCase() + '</li>';
 		}
 		str += '</ul>';
+                str+='<div id="wiki"><input type="text" id="parolaWiki" name="parola" placeholder="cerca il significato di una parola">';
+                str+='<input type="submit" id="cercaWiki" onclick="Wikizionario()" name="invia" value="Cerca su Wikizionario"></div>';
 		$('#popupCont').append(str);
 	} else if(type == 1) {
 		$('#popup').removeClass('popup-hidden');
@@ -666,4 +676,9 @@ function toX(val){
     if(val==3||val==7||val==11||val==15){return 3;}
     if(val==4||val==8||val==12||val==16){return 4;}
 
+}
+function Wikizionario(){
+    var url="https://it.wiktionary.org/wiki/";
+    url+=document.getElementById("parolaWiki").value;
+    window.open(url, '_blank');
 }

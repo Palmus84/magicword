@@ -7,7 +7,7 @@ var dizionario = {
     COLORIEFORME:"Nero,Bianco,Giallo,Rosso,Arancione,Rosa,Verde,Blu,Azzurro,Celeste,Marrone,Viola,Grigio,Cerchio,Triangolo,Quadrato,Rettangolo,Cuore,Stella,Cubo,Rombo,Trapezio,Pentagono,Esagono,Cilindro",
     ALIMENTIECUCINA:"pane,pasta,riso,carne,salsiccia,prosciutto,salame,pesce,formaggio,uovo,mela,pera,banana,fragola,ciliegia,pesca,albicocca,arancia,limone,insalata,pomodoro,patata,zucchina,carota,melanzana,acqua,vino,birra,caffé,cappuccino,caffellatte,espresso,tè,latte,succo,bistecca,aceto,acqua,burro",
     FORMAZIONEESTUDIO:"scuola,alunno,aula,banco,cattedra,compiti,insegnante,interrogazione,laboratorio,lavagna,materia,orario,palestra,pagella,preside,quadrimestre,semestre,voto,universit\u00E0,biblioteca,dipartimento,esame,facolt\u00E0,laurea,libretto,lezione,orario,portineria,preside,professore,rettore,ricevimento,segreteria,studente,voto,Liceo,Istituto,Esame,Diploma,Laurea,Dottore,Master,Tirocinio",
-    PLUS:"ciao"
+    ANIMALI:"Cane,Coniglio,Topo,Ape,Gatto,Gallina,Giraffa,Cavallo,Ape,Maiale,Leone,Lupo,Mucca,Mosca,Rana,Rospo,Pesce,Piccione,Corvo,Vespa"
 };
 
 var lettere = ["z","z"];
