@@ -27,7 +27,7 @@ var splice = 0;
 var selectedButtons = [0];
 
 $(document).ready(function() {
-	Storage.prototype.setArray = function(key, obj) {
+    	Storage.prototype.setArray = function(key, obj) {
 		return this.setItem(key, JSON.stringify(obj));
 	};
 	Storage.prototype.getArray = function(key) {
@@ -70,10 +70,18 @@ $(document).ready(function () {
 function GiocaButtonDown () {
 	if(temaButtonID == 0) {
 		alert("seleziona un tema e poi premi GIOCA");
-	} else {  
-                word_list = dizionario[temaButtonNome.replace(/\s/g, '')].toUpperCase().split(",");
-                nuovaGriglia();
-                PopulateGameView(temaButtonID, temaButtonNome, temaButtonRound, temaBackground);
+	} else {
+                $.ajax({
+                    type: "GET",
+                    url: "categorie/"+temaButtonNome.toLowerCase()+".txt",
+                    dataType: "text",
+                    contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+                    success: function(data) {
+                        word_list = data.replace("à", "\u00E0").replace("è", " \u00E8").replace("ò", "\u00F2").replace("ù", "\u00F9").replace("ì", "\u00EC").toUpperCase().split(",");
+                        nuovaGriglia();
+                        PopulateGameView(temaButtonID, temaButtonNome, temaButtonRound, temaBackground);},
+                    error: function (error) {alert("Errore nella chiamata AJAX");}
+                });                
 	}
 }
 

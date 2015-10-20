@@ -1,0 +1,1 @@
+attore,autore,avvocato,cameriere,commesso,cuoco,dentista,farmacista,fioraio,giornalaio,giornalista,macellaio,maestro,medico,dottore,parrucchiere,pasticcere,pittore,poliziotto,pompiere,postino,professore,sarto,architetto,elettricista,impiegato,infermiere,ingegnere,insegnante,operaio,barista,benzinaio,idraulico,imbianchino,autista,orologiaio,tabaccaio

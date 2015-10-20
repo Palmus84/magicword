@@ -1,0 +1,1 @@
+viso,faccia,occhio,orecchio,naso,bocca,dente,lingua,capelli,collo,spalle,schiena,pancia,braccio,mano,gamba,ginocchio,caviglia,piede,guancia,gomito,polso

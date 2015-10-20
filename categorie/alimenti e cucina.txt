@@ -1,0 +1,1 @@
+pane,pasta,riso,carne,salsiccia,prosciutto,salame,pesce,formaggio,uovo,mela,pera,banana,fragola,ciliegia,pesca,albicocca,arancia,limone,insalata,pomodoro,patata,zucchina,carota,melanzana,acqua,vino,birra,caffé,cappuccino,caffellatte,espresso,tè,latte,succo,bistecca,aceto,acqua,burro

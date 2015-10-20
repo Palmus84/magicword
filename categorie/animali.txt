@@ -1,0 +1,1 @@
+Cane,Coniglio,Topo,Ape,Gatto,Gallina,Giraffa,Cavallo,Ape,Maiale,Leone,Lupo,Mucca,Mosca,Rana,Rospo,Pesce,Piccione,Corvo,Vespa

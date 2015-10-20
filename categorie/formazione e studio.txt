@@ -1,0 +1,1 @@
+scuola,alunno,aula,banco,cattedra,compiti,insegnante,interrogazione,laboratorio,lavagna,materia,orario,palestra,pagella,preside,quadrimestre,semestre,voto,università,biblioteca,dipartimento,esame,facoltà,laurea,libretto,lezione,orario,portineria,preside,professore,rettore,ricevimento,segreteria,studente,voto,Liceo,Istituto,Esame,Diploma,Laurea,Dottore,Master,Tirocinio

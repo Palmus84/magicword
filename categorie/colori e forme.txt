@@ -1,0 +1,1 @@
+Nero,Bianco,Giallo,Rosso,Arancione,Rosa,Verde,Blu,Azzurro,Celeste,Marrone,Viola,Grigio,Cerchio,Triangolo,Quadrato,Rettangolo,Cuore,Stella,Cubo,Rombo,Trapezio,Pentagono,Esagono,Cilindro
