@@ -543,7 +543,7 @@ function RoundFinished () {
 	var str = '';
 	str += '<span class="intestazione">Bravo</span>, hai trovato tutte le parole di questa griglia';
 	str += '<br><br>';
-	str += '<a onclick="UpdateGameView(temaButtonID, temaButtonNome, currentRound + 1, temaBackground)" class="intestazione" id="prossimagriglia">Prosegui con la prossima griglia >></a>';
+	str += '<a onclick="UpdateGameView(temaButtonID, temaButtonNome, currentRound + 1, temaBackground)" class="intestazione cursor" >Prosegui con la prossima griglia >></a>';
 	document.getElementById('founded-words').innerHTML += '<hr>';
 	document.getElementById('founded-words').innerHTML += 'Totale Round - ' + CalcMiddlePoints() + ' punti<br>';
 	document.getElementById('hint').innerHTML = str;
@@ -553,7 +553,7 @@ function MatchFinished () {
 	var str = '';
 	str += '<span class="intestazione">Bravo</span>, hai trovato tutte le parole di questa partita';
 	str += '<br><br>';
-	str += '<a onclick="PopulateGameHome()" class="intestazione">Gioca una nuova partita >></a>';
+	str += '<a onclick="PopulateGameHome()" class="intestazione cursor">Gioca una nuova partita >></a>';
 	SetThemesArray(temaButtonID, true);
 	document.getElementById('founded-words').innerHTML += '<hr>';
 	document.getElementById('founded-words').innerHTML += 'Totale Partita - ' + CalcTotalPoints() + ' punti<br>';
@@ -616,19 +616,21 @@ function PopulatePopup (type) {
 	$('#popup').append('<div class="popup-cont" id="popupCont"></div>');
 
 	if(type == 0) {
+                $('#popup').addClass('dictionary');
 		$('#popup').removeClass('popup-hidden');
 		$('#popupCont').innerHTML = '';
 
 		var str = '';
-		str += '<ul>';
+		/*str += '<ul>';
 		for(var i = 0; i < risultato.total ; i++) {
 			
 			str += '<li>' + word_list[i].toUpperCase() + '</li>';
 		}
-		str += '</ul>';
+		str += '</ul>';*/
                 str+='<div id="wiki"><input type="text" id="parolaWiki" name="parola" placeholder="cerca il significato di una parola">';
                 str+='<input type="submit" id="cercaWiki" onclick="Wikizionario()" name="invia" value="Cerca su Wikizionario"></div>';
 		$('#popupCont').append(str);
+                
 	} else if(type == 1) {
 		$('#popup').removeClass('popup-hidden');
 		$('#popupCont').innerHTML = '';
@@ -645,6 +647,7 @@ function PopulatePopup (type) {
 }
 
 function ClosePopup () {
+        $('#popup').removeClass('dictionary');
 	$('#popup').addClass('popup-hidden');
 }
 

@@ -101,3 +101,12 @@
     border-radius: 8px;
     padding:5px;
 }
+.dictionary{
+    	position: absolute;
+	width: 480px;
+	height: 20%;
+        min-height:140px;
+	left: 50%;
+        margin-left: -240px;
+	top: 40%;
+}
