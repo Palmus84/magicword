@@ -198,7 +198,9 @@ function PopulateGameHome () {
 }
 
 function PopulateGameView (idTema, nomeTema, numeroRound, bgTema) {    
-    
+        wordsPoints = [];
+        thisRoundWords=[];
+        
         currentRound = numeroRound;
 	gameContainer.html("");
 	bgTema.replace("'", "");
@@ -561,19 +563,28 @@ function MatchFinished () {
 }
 
 function CheckDictionary(word) {
-        diz = dizionarioITA.toLowerCase().split("\n");
-	for(var i = 0; i < diz.length; i++) {
-		if(word.toLowerCase() === diz[i].toLowerCase()) {
-			pt = 100;
-			break;
-		} else {
-			if(i == diz.length - 1) {
-				pt = 0;
-				//console.log(word.toLowerCase() + " non esiste");
-				break;
-			}
-		}
-	}
+        $.ajax({
+            type: "GET",
+            url: "dizionarioITA.txt",
+            dataType: "text",
+            success: function(data) {
+                var diz = data.toLowerCase().split("\n");
+                console.log(diz);
+                for(var i = 0; i < diz.length; i++) {
+                        if(word.toLowerCase() == diz[i].slice(0, -1)) {
+                                pt = 100;
+                                break;
+                        } else {
+                                if(i == diz.length - 1) {
+                                        pt = 0;
+                                        //console.log(word.toLowerCase() + " non esiste");
+                                        break;
+                                }
+                        }
+                }
+            },
+            error: function (error) {alert("Errore nella chiamata AJAX");}
+        });           
 }
 
 function CalculatePoints (word) {

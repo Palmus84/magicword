@@ -60,7 +60,7 @@
 				<entries>ciao</entries>
 			</match>
 			<match id="9">
-				<name>animali</name>
+				<name>plus</name>
 				<numberOfSubmatch>4</numberOfSubmatch>
 				<themeBg>bolognaplus</themeBg>
 				<currentRound>1</currentRound>
