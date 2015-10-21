@@ -568,10 +568,10 @@ function CheckDictionary(word) {
             url: "dizionarioITA.txt",
             dataType: "text",
             success: function(data) {
-                var diz = data.toLowerCase().split("\n");
+                var diz = data.toLowerCase().split("\r\n");
                 console.log(diz);
                 for(var i = 0; i < diz.length; i++) {
-                        if(word.toLowerCase() == diz[i].slice(0, -1)) {
+                        if(word.toLowerCase() == diz[i]) {
                                 pt = 100;
                                 break;
                         } else {
