@@ -568,7 +568,7 @@ function CheckDictionary(word) {
             url: "dizionarioITA.txt",
             dataType: "text",
             success: function(data) {
-                var diz = data.toLowerCase().split("\r\n");
+                var diz = data.toLowerCase().split(" ");
                 console.log(diz);
                 for(var i = 0; i < diz.length; i++) {
                         if(word.toLowerCase() == diz[i]) {
