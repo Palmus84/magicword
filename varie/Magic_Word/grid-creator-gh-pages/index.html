@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="utf-8"/>
+    <title>Test</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+    <span id="header-bar">
+      <button id="show-controls" onclick="document.getElementById('controls').style.display='block'"><i class="fa fa-cog"></i> Settings</button>
+      <button id="clear-all" onclick="clear_all()"><i class="fa fa-trash"></i> Clear</button>
+    </span>
+
+    <span>
+      <button id="startGrid" style="position:absolute;left:500px">START GRID</button>
+    </span>
+
+    <div id="controls">
+        <div id="controls-wrap">
+            <textarea id="wordlist" rows="30" cols="30">amico
+            </textarea>
+            <div>
+                <label for"timeout">Timeout (ms)</label>
+                <input id="timeout" name="timeout" type="number" name="quantity" min="10" max="300000" step="100" value="2000">
+                <br>
+                <label for"grid_side">Grid side</label>
+                <input id="grid_side" name="grid_side" type="number" name="quantity" min="3" max="6" value="4">
+            </div>
+        </div>
+        <div id="button-wrap">
+            <button id="hide-controls" onclick="document.getElementById('controls').style.display='none'"><i class="fa fa-check"></i> Save</button>
+        </div>
+    </div>
+
+    <div id="test-container"></div>
+
+    <script type="application/javascript" src="grid-creator/backtracking.js"></script>
+    <script type="application/javascript" src="grid-creator/backtracking-smart.js"></script>
+    <script type="application/javascript" src="grid-creator/backtracking-smarter.js"></script>
+    <script type="application/javascript" src="grid-creator/random.js"></script>
+    <script type="application/javascript" src="grid-creator/lookback.js"></script>
+    <script type="application/javascript" src="test.js"></script>
+    <script type="application/javascript;version=1.7" src="grid-creator/backtracking.js"></script>
+    <script type="application/javascript;version=1.7" src="grid-creator/backtracking-smart.js"></script>
+    <script type="application/javascript;version=1.7" src="grid-creator/backtracking-smarter.js"></script>
+    <script type="application/javascript;version=1.7" src="grid-creator/random.js"></script>
+    <script type="application/javascript;version=1.7" src="grid-creator/lookback.js"></script>
+    <script type="application/javascript;version=1.7" src="test.js"></script>
+    <script>
+        document.addEventListener("mousewheel", function(event) {
+            // don't scroll vertically
+            event.preventDefault();
+
+            if (document.body.doScroll)  // for Internet Explorer
+                document.body.doScroll(event.wheelDelta>0?"left":"right");
+            else if ((event.wheelDelta || event.detail) > 0)
+                document.body.scrollLeft -= 30;
+            else
+                document.body.scrollLeft += 30;
+
+            return false;
+        });
+    </script>
+  </body>
+
+</html>

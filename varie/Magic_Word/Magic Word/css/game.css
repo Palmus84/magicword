@@ -1,0 +1,528 @@
+@font-face {
+    font-family: HelveticaPro_Normal;
+    src: url(fonts/helveticaneueltpro-it-webfont.woff);  
+}
+
+@font-face {
+    font-family: HelveticaPro_Medium;
+    src: url(fonts/helveticaneueltpro-md-webfont.woff);  
+}
+
+@font-face {
+    font-family: HelveticaPro_Bold;
+    src: url(fonts/helveticaneueltpro-bd-webfont.woff);
+    font-weight: bold;
+    
+}
+
+
+
+body {
+	font-family: HelveticaPro_Normal;
+}
+
+button {
+	cursor: pointer;
+}
+
+
+#game-content {
+	position: absolute;
+
+	width: 100%;
+	height: calc(100% - 60.5px);
+}
+
+.match-title {
+	position: absolute;
+	width: 348px;
+	height: 40px;
+
+	line-height: 40px;
+
+	left: calc(50% - (354px / 2));
+	top: 5%;
+
+	color: white;
+	border: 2px solid white;
+	border-radius: 10px;
+
+	text-align: center;
+
+}
+
+.match-title>span {
+	display: inline-block;
+
+	
+	vertical-align: middle;
+	line-height: normal;
+
+	font-weight: bold;
+	font-size: 20px;
+	font-family: Helvetica;
+}
+/*
+==================================================
+	COLONNA SINISTRA (COMPONENTI)
+==================================================
+*/
+.left-column {
+	position: absolute;
+
+	width: 280px;
+	height: 470px;
+
+	left: calc(50% - (500px));
+	top: 15%;
+}
+
+.left-hint {
+	position: relative;
+
+	width: 100%;
+	height: 350px;
+
+	background: rgba(255, 212, 47, 1.0);
+
+	border-radius: 20px;
+}
+
+.left-bg {
+	position: relative;
+	float: left;
+
+	width: calc(100% - 60px);
+	height: calc(100% - 70px);
+
+	left: 10px;
+	top: 20px;
+
+	background: rgba(255,255,255,1.0);
+
+	border-radius: 10px;
+	padding: 20px;
+
+	text-align: justify;
+}
+
+.left-button {
+	position: relative;
+
+	width: 100%;
+	height: 80px;
+
+	margin-top: 40px;
+
+	border-radius: 20px;
+	background: rgba(255, 148, 119, 1.0);
+	color: rgba(255, 255, 255, 1.0);
+
+	font-size: 30px;
+	font-weight: bold;
+
+	outline: none;
+	border: none;
+}
+
+.left-button:active {
+	background: rgba(255, 148, 119, 1.0);
+	color: rgba(255, 255, 255, 1.0);
+}
+
+.intestazione {
+	font-size: 18px;
+	color: rgba(9, 184, 177, 1.0);
+	font-weight: bold;
+}
+
+/*
+==================================================
+	COLONNA CENTRALE (COMPONENTI)
+==================================================
+*/
+
+.middle-column {
+	position: absolute;
+
+	width: 350px;
+	height: 480px;
+
+	left: calc(50% - (350px / 2));
+	top: 15%;
+}
+
+.grid-cont {
+	position: relative;
+
+	width: 350px;
+	height: 350px;
+
+	left: 0px;
+	top: 0px;
+	/*background: rgba(0,0,0,0.5);*/
+}
+
+.grid-button {
+	position: relative;
+
+	left: 0px;
+	top: 0px;
+
+	width: 77px;
+	height: 77px;
+
+	background: rgba(255, 212, 47, 1.0);
+	border-radius: 10px;
+
+	outline: none;
+	border: none;
+	margin-right: 12.5px;
+	padding: 0px;
+
+	font-size: 50px;
+	color: rgba(9, 184, 177, 1.0);
+
+	display: none;
+
+	/*-webkit-transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
+	-moz-transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
+	-o-transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;
+	transition: width 0.5s, height 0.5s, left 0.5s, top 0.5s;*/
+}
+
+.grid-button:hover {
+	background: rgba(0, 73, 68, 1.0);
+	color: rgba(200, 200, 200, 1.0);
+
+	outline: none;
+	border: none;
+}
+
+.grid-button:active {
+	background: rgba(9, 184, 177, 1.0);
+	color: rgba(255, 255, 255, 1.0);
+
+	outline: none;
+	border: none;
+}
+
+.grid-button-selected {
+	background: rgba(9, 184, 177, 1.0);
+	color: rgba(255, 255, 255, 1.0);
+
+	outline: none;
+	border: none;
+}
+
+/* =================================
+				GRID ROWS
+*/
+
+.grid-row {
+	position: relative;
+	width: 370px;
+	margin-bottom: 13.25px;
+}
+
+.grid-row-last {
+	position: relative;
+	width: 370px;
+}
+
+/* ================================= */
+
+.word-field-cont {
+	position: relative;
+	overflow: hidden;
+	/*overflow: auto;
+	overflow-y: hidden;*/
+	display: inline-block;
+
+	width: 100%;
+	height: 80px;
+
+	left: 0px;
+	top: 40px;
+
+	background: rgba(0,0,0,0.5);
+
+	border-radius: 20px;
+	border: 1px dashed rgba(255,255,255,1.0);
+}
+
+.word-field {
+	position: relative;
+
+	overflow: auto;
+	overflow-y: hidden;
+
+	width: 100%;
+	height: calc(100% + 20px);
+
+	line-height: 80px;
+
+	left: 0px;
+	top: 0px;
+
+	text-align: center;
+}
+
+.word-field>label {
+	color: white;
+
+	position: relative;
+	display: inline-block;
+
+	vertical-align: middle;
+	line-height: normal;
+
+	font-weight: normal;
+	font-size: 30px;
+	font-family: Helvetica;
+}
+
+:: -webkit-scrollbar {
+	display: none;
+}
+
+:: -moz-scrollbar {
+	display: none;
+}
+
+/* ============== TIMER ============= */
+
+.timer-field{
+	position: relative;
+
+	width: 90%;
+	height: 60px;
+
+	line-height: 60px;
+	text-align: center;
+
+	left: 5%;
+	top: 60px;
+	background: rgba(0,0,0,0.5);
+
+	border-radius: 20px;
+	border: 1px solid rgba(255,255,255,1.0);
+}
+
+.timer-field>label {
+	display: inline-block;
+
+	color: white;
+	vertical-align: middle;
+	line-height: normal;
+
+	font-weight: bold;
+	font-size: 30px;
+	font-family: Helvetica;
+}
+
+
+/*
+==================================================
+	COLONNA DESTRA (COMPONENTI)
+==================================================
+*/
+
+.right-column {
+	position: absolute;
+
+	width: 280px;
+	height: 470px;
+
+	left: calc(50% + (220px));
+	top: 15%;
+}
+
+.found-field{
+	position: relative;
+
+	/*width: calc(100% - 40px);*/
+	width: 100%;
+	height: 350px;
+
+	background: rgba(255, 212, 47, 1.0);
+
+	border-radius: 20px;
+}
+
+.right-bg {
+	position: relative;
+	float: left;
+
+	width: calc(100% - 60px);
+	height: calc(100% - 70px);
+
+	left: 10px;
+	top: 20px;
+
+	background: rgba(255,255,255,1.0);
+
+	border-radius: 10px;
+	padding: 20px;
+	text-align: justify;
+}
+
+.dizionario-button {
+	position: absolute;
+
+	width: 135px;
+	height: 80px;
+
+	left: 0px;
+	/*top: calc(100% - (80px + 40px));*/
+
+	background: rgba(255,255,255,0.5);
+
+	margin-top: 40px;
+	border-radius: 20px;
+
+	outline: none;
+	border: none;
+	padding: 0px;
+}
+.dizionario-button:hover {
+	cursor: pointer;
+}
+
+.dizionario-button>img {
+	width: 110px;
+	height: 80px;
+
+	position: relative;
+	/*left: 12.5px;*/
+}
+
+.dizionario-button>p {
+	color: white;
+	position: relative;
+
+	text-align: center;
+	margin-top: 0px;
+
+	font-weight: bold;
+}
+
+.wordbox-button {
+	position: absolute;
+
+	width: 135px;
+	height: 80px;
+
+	left: calc(100% - 135px);
+	/*top: calc(100% - (80px + 40px));*/
+
+	background: rgba(255,255,255,0.5);
+
+	margin-top: 40px;
+	border-radius: 20px;
+
+	outline: none;
+	border: none;
+	padding: 0px;
+}
+
+.wordbox-button:hover {
+	cursor: pointer;
+}
+
+.wordbox-button>img {
+	width: 110px;
+	height: 80px;
+
+	position: relative;
+	/*left: 12.5px;*/
+}
+
+.wordbox-button>p {
+	color: white;
+	position: relative;
+
+	text-align: center;
+	margin-top: 0px;
+
+	font-weight: bold;
+}
+
+.wordCount {
+	position: absolute;
+	left: 70%;
+	top: -15px;
+
+	width: 30px;
+	height: 30px;
+
+	border-radius: 15px;
+	border: 1px solid rgba(255,255,255,1.0);
+	background: rgba(255,64,0,1.0);
+
+	line-height: 30px;
+	text-align: center;
+}
+
+.wordCount>label {
+	color: white;
+	font-size: 15px;
+	font-weight: bold;
+}
+/*
+==================================================
+*/
+
+.sendWord {
+	position: absolute;
+
+	outline: none;
+	padding: 0px;
+	margin: 0px;
+	border: none;
+
+	border-radius: 20px;
+
+	width: 35px;
+	height: 35px;
+
+	top: 2.5px;
+	left: calc(350px - 37.5px);
+
+	background: rgba(9, 184, 177, 1.0);
+	text-align: center;
+	line-height: 15px;
+
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.deleteChar {
+	position: absolute;
+
+	outline: none;
+	padding: 0px;
+	margin: 0px;
+	border: none;
+
+	border-radius: 20px;
+
+	width: 35px;
+	height: 35px;
+
+	left: calc(350px - 37.5px);
+	top: 42.5px;
+
+	background: rgba(255,64,0,1.0);
+	text-align: center;
+	line-height: 15px;
+
+	color: white;
+	text-align: center;
+	font-weight: bold;
+	font-size: 15px;
+}
+
+

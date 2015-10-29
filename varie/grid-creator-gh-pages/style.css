@@ -1,0 +1,78 @@
+div.test {
+  width: 400px;
+  float: left;
+}
+
+div.test > div {
+  border-color: red;
+  border-style: dashed;
+  border-width: 3px;
+  padding: 10px;
+}
+
+div.test table {
+  font-family: monospace;
+  font-size: 30px;
+}
+
+div.test td {
+  border: 3px solid black;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+}
+
+div.description {
+  height: 130px;
+}
+
+button.test {
+  font-size: larger;
+}
+
+button.insert-all {
+  margin-bottom: 15px;
+  display: block;
+}
+
+#controls {
+  display: none;
+  z-index: 2;
+  position: fixed;
+  background-color: rgb(191, 191, 191);
+  border-width: 5px;
+  border-style: ridge;
+  padding: 20px;
+}
+
+#show-controls, #hide-controls, #clear-all {
+  font-size: x-large;
+}
+
+#button-wrap {
+  margin-top: 30px;
+  text-align: right;
+}
+
+#controls-wrap {
+  height: 300px;
+}
+
+#test-container {
+  padding-top: 50px;
+}
+
+#header-bar {
+  position: fixed;
+}
+
+#controls textarea {
+  float: left;
+  height: 100%;
+}
+
+#controls > div > div {
+  text-align: right;
+  float: left;
+  margin-left: 30px;
+}
