@@ -25,6 +25,7 @@ var middlePoints = [];
 var risultato;
 var splice = 0;
 var selectedButtons = [0];
+var grigliaON = true;
 
 $(document).ready(function() {
     	Storage.prototype.setArray = function(key, obj) {
@@ -431,7 +432,7 @@ function UpdateGameView (idTema, nomeTema, numeroRound, bgTema) {
 }
 
 function SelectGridButton (id) {
-	if(playTimer == true) {
+	if(playTimer == true && grigliaON == true) {
 		if(!$("#" + id).hasClass('grid-button-selected')) {
                     var p=selectedButtons[selectedButtons.length-1];
                     if(p==0||isAjdacent(id,p)){
@@ -726,6 +727,7 @@ function Wikizionario(){
 }
  function abbandonaRound(){
     if(currentRound != maxRound) {
+            grigliaON = false;
             var str = '';
             str += '<span class="intestazione">Round abbandonato.</span>';
             str += '<br><br>';
@@ -742,6 +744,7 @@ function Wikizionario(){
             document.getElementById('founded-words').innerHTML += str2;
             document.getElementById('hint').innerHTML = str;
     } else {
+            grigliaON = false;
             var str = '';
             str += '<span class="intestazione">Ultimo round abbandonato.</span>';
             str += '<br><br>';
