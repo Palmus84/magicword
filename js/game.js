@@ -57,6 +57,46 @@ $.ajax({
      },
      error: function (error) {alert("Errore nella chiamata AJAX");}
 });
+var tutteParoleRound="Bravo, hai trovato tutte le parole di questa griglia";
+$.ajax({
+    type: "GET",
+    url: "txt_modificabili/tutte_le_parole_del_round_trovate.txt",
+    dataType: "text",
+    success: function(data) {
+          tutteParoleRound=data;
+     },
+     error: function (error) {alert("Errore nella chiamata AJAX");}
+});
+var tutteParolePartita="Bravo, hai trovato tutte le parole di questa partita";
+$.ajax({
+    type: "GET",
+    url: "txt_modificabili/tutte_le_parole_della_partita_trovate.txt",
+    dataType: "text",
+    success: function(data) {
+          tutteParolePartita=data;
+     },
+     error: function (error) {alert("Errore nella chiamata AJAX");}
+});
+var prossimaGriglia="Prosegui con la prossima griglia >>";
+$.ajax({
+    type: "GET",
+    url: "txt_modificabili/prossima_griglia.txt",
+    dataType: "text",
+    success: function(data) {
+          prossimaGriglia=data;
+     },
+     error: function (error) {alert("Errore nella chiamata AJAX");}
+});
+var nuovaPartita="Gioca una nuova partita >>";
+$.ajax({
+    type: "GET",
+    url: "txt_modificabili/nuova_partita.txt",
+    dataType: "text",
+    success: function(data) {
+          nuovaPartita=data;
+     },
+     error: function (error) {alert("Errore nella chiamata AJAX");}
+});
 
 $(document).ready(function() {
     	Storage.prototype.setArray = function(key, obj) {
@@ -579,9 +619,9 @@ function DeleteLastChar () {
 
 function RoundFinished () {
 	var str = '';
-	str += '<span class="intestazione">Bravo</span>, hai trovato tutte le parole di questa griglia';
+	str += tutteParoleRound;
 	str += '<br><br>';
-	str += '<a onclick="UpdateGameView(temaButtonID, temaButtonNome, currentRound + 1, temaBackground)" class="intestazione cursor" >Prosegui con la prossima griglia >></a>';
+	str += '<a onclick="UpdateGameView(temaButtonID, temaButtonNome, currentRound + 1, temaBackground)" class="intestazione cursor" >'+prossimaGriglia+'</a>';
 	document.getElementById('founded-words').innerHTML += '<hr>';
 	document.getElementById('founded-words').innerHTML += 'Totale Round - ' + CalcMiddlePoints() + ' punti<br>';
 	document.getElementById('hint').innerHTML = str;
@@ -589,9 +629,9 @@ function RoundFinished () {
 
 function MatchFinished () {
 	var str = '';
-	str += '<span class="intestazione">Bravo</span>, hai trovato tutte le parole di questa partita';
+	str += tutteParolePartita;
 	str += '<br><br>';
-	str += '<a onclick="PopulateGameHome()" class="intestazione cursor">Gioca una nuova partita >></a>';
+	str += '<a onclick="PopulateGameHome()" class="intestazione cursor">'+nuovaPartita+'</a>';
 	SetThemesArray(temaButtonID, true);
 	document.getElementById('founded-words').innerHTML += '<hr>';
 	document.getElementById('founded-words').innerHTML += 'Totale Partita - ' + CalcTotalPoints() + ' punti<br>';
@@ -778,9 +818,7 @@ function confermaAbbandonaRound(){
         if(currentRound != maxRound) {
                 grigliaON = false;
                 var str = '';
-                str += '<span class="intestazione">Round abbandonato</span>';
-                str += '<br><br>';
-                str += '<a onclick="UpdateGameView(temaButtonID, temaButtonNome, currentRound + 1, temaBackground)" class="intestazione cursor" >Prosegui con la prossima griglia >></a>';
+                str += '<a onclick="UpdateGameView(temaButtonID, temaButtonNome, currentRound + 1, temaBackground)" class="intestazione cursor" >'+prossimaGriglia+'</a>';
                 var str2="<br>Le parole di questo round erano:";
                 str += '<ul>';
                 for(var i = 0; i < risultato.total ; i++) {
@@ -795,9 +833,7 @@ function confermaAbbandonaRound(){
         } else {
                 grigliaON = false;
                 var str = '';
-                str += '<span class="intestazione">Ultimo round abbandonato</span>';
-                str += '<br><br>';
-                str += '<a onclick="PopulateGameHome()" class="intestazione cursor">Gioca una nuova partita >></a>';
+                str += '<a onclick="PopulateGameHome()" class="intestazione cursor">'+nuovaPartita+'</a>';
                 SetThemesArray(temaButtonID, true);
                 var str2="<br>Le parole di questo round erano:";
                 str += '<ul>';
