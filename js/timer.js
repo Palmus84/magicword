@@ -84,7 +84,7 @@ function pauseResumeTimer () {
           dataType: "text",
           contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
           success: function(data) {
-                $('#interrompi').html(data);
+                $('#interrompi').html(bottoneINTERROMPI);
                 $('#interrompi').css("background", "rgba(255, 148, 119, 1.0)");
            },
            error: function (error) {alert("Errore nella chiamata AJAX");}
@@ -96,7 +96,7 @@ function pauseResumeTimer () {
           dataType: "text",
           contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
           success: function(data) {
-                $('#interrompi').html(data);
+                $('#interrompi').html(bottoneCONTINUA);
                 $('#interrompi').css("background", "rgba(9, 184, 177, 1.0)");
            },
            error: function (error) {alert("Errore nella chiamata AJAX");}

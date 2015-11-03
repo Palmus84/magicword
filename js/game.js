@@ -27,6 +27,37 @@ var splice = 0;
 var selectedButtons = [0];
 var grigliaON = true;
 
+var bottoneINTERROMPI="interrompi";
+$.ajax({
+    type: "GET",
+    url: "txt_modificabili/bottone_interrompi.txt",
+    dataType: "text",
+    success: function(data) {
+          bottoneINTERROMPI=data;
+     },
+     error: function (error) {alert("Errore nella chiamata AJAX");}
+});
+var bottoneCONTINUA="continua";
+$.ajax({
+    type: "GET",
+    url: "txt_modificabili/bottone_continua.txt",
+    dataType: "text",
+    success: function(data) {
+          bottoneCONTINUA=data;
+     },
+     error: function (error) {alert("Errore nella chiamata AJAX");}
+});
+var bottoneABBANDONA="abbandona";
+$.ajax({
+    type: "GET",
+    url: "txt_modificabili/bottone_abbandona_round.txt",
+    dataType: "text",
+    success: function(data) {
+          bottoneABBANDONA=data;
+     },
+     error: function (error) {alert("Errore nella chiamata AJAX");}
+});
+
 $(document).ready(function() {
     	Storage.prototype.setArray = function(key, obj) {
 		return this.setItem(key, JSON.stringify(obj));
@@ -236,7 +267,7 @@ function PopulateGameView (idTema, nomeTema, numeroRound, bgTema) {
 
 	var leftHintStr = '';
 	leftHintStr += 'Trova le parole relative al lessico di <span class="intestazione">' + capName + '</span><br><br>In questa griglia sono presenti <span class="intestazione">'+risultato.total+' parole</span>';
-        leftHintStr += '<br><br><span onClick="confermaAbbandonaRound();" class="cursor">Abbandona round</span>';
+        leftHintStr += '<br><br><span onClick="confermaAbbandonaRound();" class="cursor">'+bottoneABBANDONA+'</span>';
         
 	var s = '';
 	
@@ -247,7 +278,7 @@ function PopulateGameView (idTema, nomeTema, numeroRound, bgTema) {
 	s += 	'<div class="left-hint">';
 	s +=		'<div class="left-bg" id="hint">' + leftHintStr + '</div>';	
 	s += 	'</div>';
-	s += 	'<button class="left-button" id="interrompi" onclick="pauseResumeTimer()">INTERROMPI</button>';
+	s += 	'<button class="left-button" id="interrompi" onclick="pauseResumeTimer()">'+bottoneINTERROMPI+'</button>';
 	s += '</div>';
 
 	s += '<div class="middle-column">';
@@ -343,7 +374,7 @@ function UpdateGameView (idTema, nomeTema, numeroRound, bgTema) {
 
 	var leftHintStr = '';
 	leftHintStr += 'Trova le parole relative al lessico di <span class="intestazione">' + capName + '</span><br><br>In questa griglia sono presenti <span class="intestazione">'+risultato.total+' parole</span>';
-        leftHintStr += '<br><br><span onClick="confermaAbbandonaRound();" class="cursor">Abbandona round</span>';
+        leftHintStr += '<br><br><span onClick="confermaAbbandonaRound();" class="cursor">'+bottoneABBANDONA+'</span>';
         
 	var s = '';
 	
@@ -354,7 +385,7 @@ function UpdateGameView (idTema, nomeTema, numeroRound, bgTema) {
 	s += 	'<div class="left-hint">';
 	s +=		'<div class="left-bg" id="hint">' + leftHintStr + '</div>';	
 	s += 	'</div>';
-	s += 	'<button class="left-button" id="interrompi" onclick="pauseResumeTimer()">INTERROMPI</button>';
+	s += 	'<button class="left-button" id="interrompi" onclick="pauseResumeTimer()">'+bottoneINTERROMPI+'</button>';
 	s += '</div>';
 
 	s += '<div class="middle-column">';
