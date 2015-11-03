@@ -236,7 +236,7 @@ function PopulateGameView (idTema, nomeTema, numeroRound, bgTema) {
 
 	var leftHintStr = '';
 	leftHintStr += 'Trova le parole relative al lessico di <span class="intestazione">' + capName + '</span><br><br>In questa griglia sono presenti <span class="intestazione">'+risultato.total+' parole</span>';
-        leftHintStr += '<br><br><span onClick="abbandonaRound();" class="cursor">Abbandona round</span>';
+        leftHintStr += '<br><br><span onClick="confermaAbbandonaRound();" class="cursor">Abbandona round</span>';
         
 	var s = '';
 	
@@ -343,7 +343,7 @@ function UpdateGameView (idTema, nomeTema, numeroRound, bgTema) {
 
 	var leftHintStr = '';
 	leftHintStr += 'Trova le parole relative al lessico di <span class="intestazione">' + capName + '</span><br><br>In questa griglia sono presenti <span class="intestazione">'+risultato.total+' parole</span>';
-        leftHintStr += '<br><br><span onClick="abbandonaRound();" class="cursor">Abbandona round</span>';
+        leftHintStr += '<br><br><span onClick="confermaAbbandonaRound();" class="cursor">Abbandona round</span>';
         
 	var s = '';
 	
@@ -666,7 +666,7 @@ function PopulatePopup (type) {
 		var str = '<div id="credits">';
                 $.ajax({
                     type: "GET",
-                    url: "credits.txt",
+                    url: "txt_modificabili/credits.txt",
                     dataType: "text",
                     success: function(data) {
                         str+=data.replace("à", "\u00E0").replace("è", " \u00E8").replace("ò", "\u00F2").replace("ù", "\u00F9").replace("ì", "\u00EC").replace(/\n/g, "<br />");;
@@ -725,41 +725,60 @@ function Wikizionario(){
     url+=document.getElementById("parolaWiki").value;
     window.open(url, '_blank');
 }
+function confermaAbbandonaRound(){
+    $.ajax({
+       type: "GET",
+       url: "txt_modificabili/conferma_abbandona_round.txt",
+       dataType: "text",
+       contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+       success: function(data) {
+            if(confirm(data)){
+                abbandonaRound();
+            }
+        },
+       error: function (error) {
+            if(confirm("sei sicuro?")){
+                abbandonaRound();
+            }
+       }
+    });
+}
  function abbandonaRound(){
-    if(currentRound != maxRound) {
-            grigliaON = false;
-            var str = '';
-            str += '<span class="intestazione">Round abbandonato.</span>';
-            str += '<br><br>';
-            str += '<a onclick="UpdateGameView(temaButtonID, temaButtonNome, currentRound + 1, temaBackground)" class="intestazione cursor" >Prosegui con la prossima griglia >></a>';
-            var str2="Le parole di questo round erano:";
-            str += '<ul>';
-            for(var i = 0; i < risultato.total ; i++) {
+        if(currentRound != maxRound) {
+                grigliaON = false;
+                var str = '';
+                str += '<span class="intestazione">Round abbandonato</span>';
+                str += '<br><br>';
+                str += '<a onclick="UpdateGameView(temaButtonID, temaButtonNome, currentRound + 1, temaBackground)" class="intestazione cursor" >Prosegui con la prossima griglia >></a>';
+                var str2="<br>Le parole di questo round erano:";
+                str += '<ul>';
+                for(var i = 0; i < risultato.total ; i++) {
 
-                    str2 += '<li>' + word_list[i].toUpperCase() + '</li>';
-            }
-            str2 += '</ul>';
-            str2 += '<hr>';
-            str2+='Totale Round - ' + CalcMiddlePoints() + ' punti<br>';
-            document.getElementById('founded-words').innerHTML += str2;
-            document.getElementById('hint').innerHTML = str;
-    } else {
-            grigliaON = false;
-            var str = '';
-            str += '<span class="intestazione">Ultimo round abbandonato.</span>';
-            str += '<br><br>';
-            str += '<a onclick="PopulateGameHome()" class="intestazione cursor">Gioca una nuova partita >></a>';
-            SetThemesArray(temaButtonID, true);
-            var str2="Le parole di questo round erano:";
-            str += '<ul>';
-            for(var i = 0; i < risultato.total ; i++) {
+                        str2 += '<li>' + word_list[i].toUpperCase() + '</li>';
+                }
+                str2 += '</ul>';
+                str2 += '<hr>';
+                str2+='Totale Round - ' + CalcMiddlePoints() + ' punti<br>';
+                document.getElementById('founded-words').innerHTML += str2;
+                document.getElementById('hint').innerHTML = str;
+        } else {
+                grigliaON = false;
+                var str = '';
+                str += '<span class="intestazione">Ultimo round abbandonato</span>';
+                str += '<br><br>';
+                str += '<a onclick="PopulateGameHome()" class="intestazione cursor">Gioca una nuova partita >></a>';
+                SetThemesArray(temaButtonID, true);
+                var str2="<br>Le parole di questo round erano:";
+                str += '<ul>';
+                for(var i = 0; i < risultato.total ; i++) {
 
-                    str2 += '<li>' + word_list[i].toUpperCase() + '</li>';
-            }
-            str2 += '</ul>';
-            str2 += '<hr>';
-            str2+= 'Totale Partita - ' + CalcTotalPoints() + ' punti<br>';
-            document.getElementById('founded-words').innerHTML += str2;
-            document.getElementById('hint').innerHTML = str;
-    }
+                        str2 += '<li>' + word_list[i].toUpperCase() + '</li>';
+                }
+                str2 += '</ul>';
+                str2 += '<hr>';
+                str2+= 'Totale Partita - ' + CalcTotalPoints() + ' punti<br>';
+                document.getElementById('founded-words').innerHTML += str2;
+                document.getElementById('hint').innerHTML = str;
+        }
+    
  }

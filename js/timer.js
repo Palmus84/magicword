@@ -77,12 +77,30 @@ function SetTimer (hh, mm, ss, fld) {
 
 function pauseResumeTimer () {
 	playTimer = !playTimer;
-
     if(playTimer == true) {
-        $('#interrompi').html("INTERROMPI");
-        $('#interrompi').css("background", "rgba(255, 148, 119, 1.0)");
+        $.ajax({
+          type: "GET",
+          url: "txt_modificabili/bottone_interrompi.txt",
+          dataType: "text",
+          contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+          success: function(data) {
+                $('#interrompi').html(data);
+                $('#interrompi').css("background", "rgba(255, 148, 119, 1.0)");
+           },
+           error: function (error) {alert("Errore nella chiamata AJAX");}
+        });
     } else {
-        $('#interrompi').html("CONTINUA");
-        $('#interrompi').css("background", "rgba(9, 184, 177, 1.0)");
+        $.ajax({
+          type: "GET",
+          url: "txt_modificabili/bottone_continua.txt",
+          dataType: "text",
+          contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
+          success: function(data) {
+                $('#interrompi').html(data);
+                $('#interrompi').css("background", "rgba(9, 184, 177, 1.0)");
+           },
+           error: function (error) {alert("Errore nella chiamata AJAX");}
+        });
+        
     }
 }
