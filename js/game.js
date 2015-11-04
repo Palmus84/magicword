@@ -307,7 +307,7 @@ function PopulateGameView (idTema, nomeTema, numeroRound, bgTema) {
 
 	var leftHintStr = '';
 	leftHintStr += 'Trova le parole relative al lessico di <span class="intestazione">' + capName + '</span><br><br>In questa griglia sono presenti <span class="intestazione">'+risultato.total+' parole</span>';
-        leftHintStr += '<br><br><span onClick="confermaAbbandonaRound();" class="cursor">'+bottoneABBANDONA+'</span>';
+        leftHintStr += '<br><hr class="hr"><span onClick="confermaAbbandonaRound();" class="cursor">'+bottoneABBANDONA+'</span>';
         
 	var s = '';
 	
@@ -414,7 +414,7 @@ function UpdateGameView (idTema, nomeTema, numeroRound, bgTema) {
 
 	var leftHintStr = '';
 	leftHintStr += 'Trova le parole relative al lessico di <span class="intestazione">' + capName + '</span><br><br>In questa griglia sono presenti <span class="intestazione">'+risultato.total+' parole</span>';
-        leftHintStr += '<br><br><span onClick="confermaAbbandonaRound();" class="cursor">'+bottoneABBANDONA+'</span>';
+        leftHintStr += '<br><hr class="hr"><span onClick="confermaAbbandonaRound();" class="cursor">'+bottoneABBANDONA+'</span>';
         
 	var s = '';
 	
