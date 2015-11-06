@@ -1,3 +1,20 @@
-CREDITS:
+Crediti (didattica)
+Daniela Gallingani - Scuola di Lingue e Letterature, Traduzione e Interpretazione Alma Mater Studiorum Università di Bologna
+Marco Presotto - Scuola di Lingue e Letterature, Traduzione e Interpretazione Alma Mater Studiorum Università di Bologna
+Andrea Ceccherelli - Responsabile del progetto E-Local 
+Cristiana Cervini - Coordinamento lingua italiana per Innovalangues 
+Mathieu Loiseau - Responsabile GAMER
+Monica Masperi - Responsabile del progetto Innovalangues 
+Antonella Valva - Project manager E-Local 
 
-Alma Mater Studiorum Università di Bologna.
+Crediti (progettazione e realizzazione)
+Paola Salomoni - DISI  Dipartimento di Informatica, Scienza e Ingegneria
+Marco Roccetti - DISI Dipartimento di Informatica, Scienza e Ingegneria
+Marco Zanichelli - Open Stories
+
+Autrici della versione originale di Magic Word
+Christine Lutian 
+Pauline Rebourgeron 
+
+Autres contributions (suivi de réalisation, test, proposition de fonctionnalités, correction de bugs, seconde itération de la branche Grenobloise) 
+Pauline Ballot, David Graceffa, Racha Hallal, Maryam Nejat, Haydée Silva, Virginie Zampa.

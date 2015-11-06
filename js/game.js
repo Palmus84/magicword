@@ -149,7 +149,7 @@ function GiocaButtonDown () {
                     dataType: "text",
                     contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
                     success: function(data) {
-                        word_list = data.replace("à", "\u00E0").replace("è", " \u00E8").replace("ò", "\u00F2").replace("ù", "\u00F9").replace("ì", "\u00EC").toUpperCase().split(",");
+                        word_list = data.replace("à", "\u00E0").replace("è", " \u00E8").replace("ò", "\u00F2").replace("ù", "\u00F9").replace("ì", "\u00EC").replace("é","\u00E9").toUpperCase().split(",");
                         nuovaGriglia();
                         PopulateGameView(temaButtonID, temaButtonNome, temaButtonRound, temaBackground);},
                     error: function (error) {alert("Errore nella chiamata AJAX");}
@@ -740,7 +740,7 @@ function PopulatePopup (type) {
                     url: "txt_modificabili/credits.txt",
                     dataType: "text",
                     success: function(data) {
-                        str+=data.replace("à", "\u00E0").replace("è", " \u00E8").replace("ò", "\u00F2").replace("ù", "\u00F9").replace("ì", "\u00EC").replace(/\n/g, "<br />");;
+                        str+=data.replace("à", "\u00E0").replace("è", " \u00E8").replace("ò", "\u00F2").replace("ù", "\u00F9").replace("ì", "\u00EC").replace("é","\u00E9").replace(/\n/g, "<br />");;
                         str+='</div>';
                         $('#popupCont').append(str);
                     },
