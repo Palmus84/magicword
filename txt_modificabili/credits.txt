@@ -1,20 +1,25 @@
 Crediti (didattica)
-Daniela Gallingani - Scuola di Lingue e Letterature, Traduzione e Interpretazione Alma Mater Studiorum Università di Bologna
-Marco Presotto - Scuola di Lingue e Letterature, Traduzione e Interpretazione Alma Mater Studiorum Università di Bologna
-Andrea Ceccherelli - Responsabile del progetto E-Local 
-Cristiana Cervini - Coordinamento lingua italiana per Innovalangues 
-Mathieu Loiseau - Responsabile GAMER
-Monica Masperi - Responsabile del progetto Innovalangues 
-Antonella Valva - Project manager E-Local 
+Andrea Ceccherelli: responsabile del progetto E-Local (andrea.ceccherelli@unibo.it)
+Cristiana Cervini: coordinamento lingua italiana per Innovalangues (cristiana.cervini@u-grenoble3.fr; cristiana.cervini@unibo.it)
+Mathieu Loiseau : responsabile GAMER (mathieu.loiseau@u-grenoble3.fr)
+Monica Masperi : responsabile del progetto Innovalangues (monica.masperi@u-grenoble3.fr)
+Antonella Valva: project manager del progetto E-Local (antonella.valva2@unibo.it) 
 
 Crediti (progettazione e realizzazione)
 Paola Salomoni - DISI  Dipartimento di Informatica, Scienza e Ingegneria
 Marco Roccetti - DISI Dipartimento di Informatica, Scienza e Ingegneria
 Marco Zanichelli - Open Stories
+Daniela Gallingani - Scuola di Lingue e Letterature, Traduzione e Interpretazione
+Marco Presotto - Scuola di Lingue e Letterature, Traduzione e Interpretazione
 
-Autrici della versione originale di Magic Word
-Christine Lutian 
-Pauline Rebourgeron 
+Autrici della versione originale di Magic Word:
+Christine Lutian (clutian87@gmail.com)
+Pauline Rebourgeron (paulinerebourgeon@gmail.com)
 
-Autres contributions (suivi de réalisation, test, proposition de fonctionnalités, correction de bugs, seconde itération de la branche Grenobloise) 
-Pauline Ballot, David Graceffa, Racha Hallal, Maryam Nejat, Haydée Silva, Virginie Zampa.
+Contributi diversi nella creazione della versione originale di Magic Word (supporto, test, correzioni di bug, seconda iterazione del ramo grenoblese)
+Pauline Ballot (pauline.ballot@u-grenoble3.fr)
+David Graceffa (david.graceffa@live.fr)
+Racha Hallal (racha.hallal@u-grenoble3.fr)
+Maryam Nejat (nejatmaryam@gmail.com)
+Haydée Silva (silva8a@unam.mx)
+Virginie Zampa (virginie.zampa@u-grenoble3.fr)
