@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 
 @font-face {
     font-family: HelveticaPro_Normal;
@@ -200,13 +200,12 @@ body {
     100% {margin-top:-100%;}
 }
 #splash-img{
-    width:704px;
-    height:146px;
-    margin-left:-352px;
-    margin-top:-120px;
+    width:80%;
+    height:1auto;
+    margin-left:10%;
+    margin-top:-80px;
     position:fixed;
     top:50%;
-    left:50%;
     animation-name: slidedown;
     animation-duration: 2s;
     animation-delay: 2s;
