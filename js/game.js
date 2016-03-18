@@ -554,7 +554,7 @@ function SendWord () {
 function SetPunti(punti) {
 	document.getElementById('founded-words').innerHTML += currentWord + ' - ' + punti + ' punti<br>';
 
-	if(pt == 200) {
+	if(punti == 200) {
 		wordsPoints.push(200);
 		if(currentWordboxCounter == risultato.total-1) {
 			currentWordboxCounter = 0;
@@ -572,7 +572,7 @@ function SetPunti(punti) {
                     totalWordboxCounter++;
                     UpdateWordboxStorage(currentWord);
                 }
-	} else if(pt == 100) {
+	} else if(punti == 100) {
 		wordsPoints.push(100);
 		var tempArr = new Array();
                 tempArr = wordboxWords;
@@ -595,22 +595,6 @@ function UpdateWordbox () {
 }
 
 function DeleteLastChar () {
-	/*if(playTimer == true) {
-		var lastWord = document.getElementById('wordField').innerHTML;
-
-		if(lastWord.length > 0) {
-			var newStr = "";
-			for(var i = 0; i < lastWord.length-1; i++) {
-				newStr += lastWord[i];
-			}
-			currentWord = newStr;
-			document.getElementById('wordField').innerHTML = newStr;
-
-			if(lastWord.length == 1) {
-				ResetGridButtons();
-			}
-		}
-	}*/
         ResetGridButtons();
         currentWord = "";
         document.getElementById('wordField').innerHTML = "";
